@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Generics</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Generics</h1>
+<div class="card">
+<p>Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces, and methods. Provide compile‑time type safety.</p>
+<pre>List<String> list = new ArrayList<>();</pre>
+<h2>Key points</h2>
+<ul>
+<li>Angle‑bracket syntax: <code>List<Integer></code></li>
+<li>Erasure – generic type info is removed at runtime.</li>
+<li>Bounded type parameters: <code><T extends Number></code></li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Write a generic method that prints an array of any type')">Think</button>
+<pre>public static <T> void printArr(T[] arr) { for (T e : arr) System.out.println(e); }</pre>
+<h2>Code Question (no code)</h2>
+<p>What does the diamond operator (<code>&lt></code>) do when instantiating a generic class? Answer: It lets the compiler infer the type argument from the left‑hand side.</p>
+<h2>Theory Question</h2>
+<p>Explain the difference between a raw type and a parameterized type.</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Write a generic method <code>public static <T> T getMax(T[] arr)</code> that returns the maximum element, assuming T implements Comparable.</li>
+<li>Create a generic class <code>Box<T></code> with a field <code>T item</code>, a setter <code>setItem(T)</code> and a getter <code>getItem()</code>.</li>
+<li>Write a simple generic interface <code>Pair<K, V></code> with methods <code>K getKey()</code> and <code>V getValue()</code>, and provide a lambda expression that creates a Pair instance.</li>
+</ol>
+<pre>// Example solution for problem 1:
+public static <T extends Comparable<T>> T getMax(T[] arr) {
+    T max = arr[0];
+    for (int i = 1; i < arr.length; i++) if (arr[i].compareTo(max) > 0) max = arr[i];
+    return max;
+}
+
+// Example solution for problem 2:
+public class Box<T> {
+    private T item;
+    public void setItem(T item) { this.item = item; }
+    public T getItem() { return item; }
+}
+</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

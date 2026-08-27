@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Objects</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Objects</h1>
+<div class="card">
+<p>An object is an instance of a class that combines data (fields) and behavior (methods). Objects are created using the <code>new</code> keyword.</p>
+<pre>String s = new String("hello");</pre>
+<h2>Key points</h2>
+<ul>
+<li>State is stored in fields (attributes).</li>
+<li>Behavior is defined by methods.</li>
+<li>Objects interact by sending messages (calling methods).</li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Create a simple Circle object with radius field and a method to compute area')">Think</button>
+<pre>double area = Math.PI * r * r;</pre>
+<h2>Code Question (no code)</h2>
+<p>What is the difference between an object's reference variable and the actual object on the heap? Answer: The reference holds the memory address; the object is the data stored at that address.</p>
+<h2>Theory Question</h2>
+<p>How does garbage collection in Java determine which objects are eligible for reclamation?</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Write a class <code>Employee</code> with fields <code>name</code> and <code>salary</code>, a constructor, and a method <code>raiseSalary(double pct)</code> that increases salary by the given percentage.</li>
+<li>Create a <code>Car</code> object with a <code>speed</code> field and methods <code>accelerate()</code> and <code>brake()</code> that modify the speed.</li>
+<li>Given two object references, write a snippet to swap them without using a temporary variable (use XOR for primitive types or simply assign).</li>
+</ol>
+<pre>// Example solution for problem 1:
+public class Employee {
+    String name;
+    double salary;
+    Employee(String n, double s) { name = n; salary = s; }
+    void raiseSalary(double pct) { salary *= (1 + pct/100); }
+}</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

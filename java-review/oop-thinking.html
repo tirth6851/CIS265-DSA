@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Object‑Oriented Thinking</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Object‑Oriented Thinking</h1>
+<div class="card">
+<p>Thinking in objects means modelling real‑world entities as objects that encapsulate state and expose behavior through methods. Key concepts: abstraction, encapsulation, polymorphism, and inheritance.</p>
+<h2>Four pillars</h2>
+<ul>
+<li><strong>Encapsulation</strong> – hide internal state, expose via public methods.</li>
+<li><strong>Abstraction</strong> – focus on essential features, ignore details.</li>
+<li><strong>Polymorphism</strong> – same message can behave differently on different objects.</li>
+<li><strong>Inheritance</strong> – new classes acquire properties of existing ones.</li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Write an interface Shape with a method double area();')">Think</button>
+<pre>public double area();</pre>
+<h2>Code Question (no code)</h2>
+<p>How does method overloading differ from overriding? Overloading happens within the same class; overriding redefines a superclass method in a subclass.</p>
+<h2>Theory Question</h2>
+<p>Explain the 'is‑a' relationship and give an example using Java classes.</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Define an abstract class <code>Animal</code> with an abstract method <code>makeSound()</code> and a concrete method <code>eat()</code>. Create a subclass <code>Cat</code> that implements <code>makeSound()</code>.</li>
+<li>Write a small program that demonstrates polymorphism: assign a <code>Cat</code> object to an <code>Animal</code> reference and call both <code>eat()</code> and <code>makeSound()</code>.</li>
+<li>Create an interface <code>Drawable</code> with method <code>draw()</code>, and have a class <code>Circle</code> implement both <code>Animal</code> (from previous problem) and <code>Drawable</code>.</li>
+</ol>
+<pre>// Example solution for problem 1:
+public abstract class Animal {
+    abstract void makeSound();
+    void eat() { System.out.println("eating"); }
+}
+public class Cat extends Animal {
+    void makeSound() { System.out.println("meow"); }
+}</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

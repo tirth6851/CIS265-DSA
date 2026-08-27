@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Classes</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Classes</h1>
+<div class="card">
+<p>A class is a blueprint for creating objects. It defines fields (attributes) and methods (behavior).</p>
+<pre>public class Dog {
+    String name;
+    void bark() { System.out.println("Woof!"); }
+}</pre>
+<h2>Class components</h2>
+<ul>
+<li>Fields (variables)</li>
+<li>Methods (functions)</li>
+<li>Constructors (initialization)</li>
+<li>Nested classes</li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Write a constructor for a Car class that sets make and model')">Think</button>
+<pre>public Car(String make, String model) { this.make = make; this.model = model; }</pre>
+<h2>Code Question (no code)</h2>
+<p>Can a class have more than one constructor? Answer: Yes, via overloading.</p>
+<h2>Theory Question</h2>
+<p>What is the role of the <code>static</code> keyword when applied to a field or method?</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Write a <code>Rectangle</code> class with fields <code>width</code> and <code>height</code>, a constructor, and a method <code>area()</code> that returns the area.</li>
+<li>Define a class <code>Book</code> with a <code>title</code> field and a <code>toString()</code> method that returns the title.</li>
+<li>Create a generic pair class <code>Pair<K, V></code> with fields <code>key</code> and <code>value</code>, a constructor, and getter methods.</li>
+</ol>
+<pre>// Example solution for problem 1:
+public class Rectangle {
+    double width, height;
+    Rectangle(double w, double h) { width = w; height = h; }
+    double area() { return width * height; }
+}</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

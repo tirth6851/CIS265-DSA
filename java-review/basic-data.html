@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Basic Data Structures</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Basic Data Structures</h1>
+<div class="card">
+<p>Java provides built‑in collection types for common data structures. The most used are ArrayList (dynamic array), LinkedList (double‑linked list), Stack (LIFO), and Queue (FIFO).</p>
+<pre>ArrayList<String> list = new ArrayList<>();</pre>
+<h2>Core structures</h2>
+<ul>
+<li><strong>ArrayList</strong> – resizable array, fast random access, O(n) insert/remove in middle.</li>
+<li><strong>LinkedList</strong> – doubly‑linked list, O(1) insert/remove at ends, slower random access.</li>
+<li><strong>Stack</strong> – LIFO, methods <code>push</code>, <code>pop</code>.</li>
+<li><strong>Queue</strong> – FIFO, methods <code>offer</code>, <code>poll</code>.</li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Add elements to a Queue and remove one')">Think</button>
+<pre>Queue<String> q = new LinkedList<>(); q.offer("a"); String s = q.poll();</pre>
+<h2>Code Question (no code)</h2>
+<p>Which interface does Stack implement? Answer: Stack extends Vector, which implements java.util.Vector; traditionally considered a legacy Stack.</p>
+<h2>Theory Question</h2>
+<p>When would you choose a LinkedList over an ArrayList? Answer: When frequent insertions/removals at ends or middle are needed.</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Create an <code>ArrayList</code> of integers, add five numbers, then remove the third element and print the list.</li>
+<li>Using a <code>LinkedList</code> as a stack, push three strings and then pop one, printing the popped value and remaining elements.</li>
+<li>Demonstrate a <code>Queue</code> with a <code>LinkedList</code>: add two elements, poll one, and check the size.</li>
+</ol>
+<pre>// Example solution for problem 1:
+ArrayList<Integer> list = new ArrayList<>();
+list.add(10); list.add(20); list.add(30); list.add(40); list.add(50);
+list.remove(2); // remove element at index 2
+System.out.println(list); // [10, 20, 40, 50]</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

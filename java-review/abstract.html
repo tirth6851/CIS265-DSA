@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Abstract Classes</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Abstract Classes</h1>
+<div class="card">
+<p>An abstract class cannot be instantiated; it is meant to be subclassed. It may contain abstract (no body) and concrete methods.</p>
+<pre>abstract class Shape {
+    abstract double area();
+    void draw() { System.out.println("drawing shape"); }}
+</pre>
+<h2>Key points</h2>
+<ul>
+<li>Use <code>abstract</code> keyword before class or method.</li>
+<li>A subclass must implement all abstract methods or become abstract too.</li>
+<li>Can have constructors, fields, final methods.</li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Create a concrete subclass Circle that implements area()')">Think</button>
+<pre>class Circle extends Shape { double radius; Circle(double r) { this.radius = r; } public double area() { return Math.PI * radius * radius; }}</pre>
+<h2>Code Question (no code)</h2>
+<p>Can an abstract class have a final method? Answer: Yes, final methods cannot be overridden.</p>
+<h2>Theory Question</h2>
+<p>What is the difference between an abstract class and an interface prior to Java 8?</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Write an abstract class <code>Shape</code> with an abstract method <code>double area()</code> and a concrete method <code>void describe()</code> that prints "Shape description". Create a concrete subclass <code>Rectangle</code> with fields <code>width</code> and <code>height</code>, a constructor, and an implementation of <code>area()</code>.</li>
+<li>Create an abstract class <code>Animal</code> with a concrete method <code>void breathe()</code> and an abstract method <code>void makeSound()</code>. Provide two subclasses <code>Dog</code> and <code>Cat</code> that each implement <code>makeSound()</code>.</li>
+<li>Demonstrate that trying to instantiate the abstract class directly results in a compile‑time error.</li>
+</ol>
+<pre>// Example solution for problem 1:
+public abstract class Shape {
+    abstract double area();
+    void describe() { System.out.println("Shape description"); }
+}
+public class Rectangle extends Shape {
+    double width, height;
+    Rectangle(double w, double h) { width = w; height = h; }
+    public double area() { return width * height; }
+}</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

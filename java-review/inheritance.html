@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inheritance</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Inheritance</h1>
+<div class="card">
+<p>Inheritance lets a class (subclass) acquire fields and methods of another class (superclass). Java supports single inheritance for classes, but multiple interface implementation.</p>
+<pre>class Animal { void eat() { System.out.println("eating"); } }
+class Dog extends Animal { void bark() { System.out.println("barking"); }}</pre>
+<h2>Key points</h2>
+<ul>
+<li>Use <code>extends</code> keyword.</li>
+<li>Subclass can override superclass methods.</li>
+<li>Constructor chaining: <code>super()</code> call.</li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Override the eat() method in Dog to print \"dog food\"')">Think</button>
+<pre>@Override void eat() { System.out.println("dog food"); }</pre>
+<h2>Code Question (no code)</h2>
+<p>What is the purpose of the <code>final</code> keyword when applied to a class? Answer: Prevents the class from being subclassed.</p>
+<h2>Theory Question</h2>
+<p>Describe the difference between an interface and an abstract class in the context of inheritance.</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Create a superclass <code>Vehicle</code> with a field <code>String color</code>, a constructor, and a method <code>void drive()</code>. Create a subclass <code>Car</code> that overrides <code>drive()</code> to print "Car driving".</li>
+<li>Add a subclass <code>ElectricCar</code> that extends <code>Car</code> and adds a method <code>void charge()</code>. Demonstrate constructor chaining with <code>super()</code>.</li>
+<li>Using an <code>Animal</code> superclass and a <code>Dog</code> subclass (as in earlier topics), show how to call <code>super.eat()</code> from the overridden method.</li>
+</ol>
+<pre>// Example solution for problem 1:
+public class Vehicle {
+    String color;
+    Vehicle(String c) { color = c; }
+    void drive() { System.out.println("Vehicle driving"); }
+}
+public class Car extends Vehicle {
+    Car(String c) { super(c); }
+    @Override void drive() { System.out.println("Car driving"); }
+}</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

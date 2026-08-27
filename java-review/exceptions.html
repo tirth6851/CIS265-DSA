@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Exceptions</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Exceptions</h1>
+<div class="card">
+<p>An exception is an event that disrupts normal program flow. Java uses <code>try-catch-finally</code> to handle it. Checked exceptions must be caught or declared; runtime exceptions do not.</p>
+<pre>try { int x = 10 / 0; } catch (ArithmeticException e) { System.out.println("Cannot divide by zero"); }</pre>
+<h2>Key concepts</h2>
+<ul>
+<li><code>try</code> – block where exception may occur.</li>
+<li><code>catch</code> – handle specific exception type.</li>
+<li><code>finally</code> – always executed (used for cleanup).</li>
+<li>Throwing: <code>throw new IllegalArgumentException("msg");</code></li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Write a try-catch that catches NumberFormatException when parsing int')">Think</button>
+<pre>try { int n = Integer.parseInt(text); } catch (NumberFormatException e) { System.out.println("Invalid number"); }</pre>
+<h2>Code Question (no code)</h2>
+<p>What is the difference between throwing a checked exception and an unchecked exception? Checked must be declared or caught; unchecked (RuntimeException and its subclasses) are not enforced.</p>
+<h2>Theory Question</h2>
+<p>Explain the purpose of the <code>finally</code> block and whether it runs if an exception is not caught.</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Write a method <code>public static int safeDivide(int a, int b)</code> that returns <code>a / b</code> if <code>b != 0</code>, otherwise throws an <code>ArithmeticException</code> with a descriptive message.</li>
+<li>Create a try‑catch‑finally block that reads an integer from the console (use a placeholder <code>Integer.parseInt("abc")</code> to simulate NumberFormatException), catches the exception, prints "Invalid input", and finally prints "Cleanup done".</li>
+<li>Define a custom checked exception class <code>InsufficientFundsException</code> (extends Exception) and a method <code>withdraw(double amount)</code> that throws it if amount > balance.</li>
+</ol>
+<pre>// Example solution for problem 1:
+public static int safeDivide(int a, int b) {
+    if (b == 0) throw new ArithmeticException("Cannot divide by zero");
+    return a / b;
+}
+
+// Example solution for problem 3:
+class InsufficientFundsException extends Exception {
+    InsufficientFundsException(String s) { super(s); }
+}
+</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

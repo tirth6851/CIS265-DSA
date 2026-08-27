@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sets</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Sets</h1>
+<div class="card">
+<p>A Set is a collection that contains no duplicate elements. It models the mathematical set interface. Common implementations: HashSet (hash-based, O(1) operations), LinkedHashSet (preserves insertion order), TreeSet (sorted, O(log n)).</p>
+<pre>Set<String> set = new HashSet<>();</pre>
+<h2>Key operations</h2>
+<ul>
+<li>Add: <code>set.add("a")</code></li>
+<li>Remove: <code>set.remove("a")</code></li>
+<li>Check containment: <code>set.contains("a")</code></li>
+<li>Size, isEmpty, clear</li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Add three strings to a HashSet and check for duplicates')">Think</button>
+<pre>Set<String> s = new HashSet<>(); s.add("a"); s.add("b"); s.add("a"); System.out.println(s.size());</pre>
+<h2>Code Question (no code)</h2>
+<p>What happens if you try to insert a duplicate element into a Set? Answer: The add method returns false and the set size does not increase.</p>
+<h2>Theory Question</h2>
+<p>Explain the difference between HashSet and TreeSet with respect to ordering and performance.</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Create a <code>HashSet</code>, add the strings "apple", "banana", "apple", "cherry", then print the size and iterate to list all unique elements.</li>
+<li>Using a <code>TreeSet</code>, add the integers 5, 2, 8, 1 and print them in sorted order.</li>
+<li>Write a program that removes all duplicate elements from an <code>ArrayList<String</code>> by transferring them into a <code>HashSet</code> and back.</li>
+</ol>
+<pre>// Example solution for problem 1:
+Set<String> s = new HashSet<>();
+s.add("apple"); s.add("banana"); s.add("apple"); s.add("cherry");
+System.out.println(s.size()); // 3
+for (String fruit : s) System.out.println(fruit);
+
+// Example solution for problem 2:
+TreeSet<Integer> ts = new TreeSet<>();
+ts.add(5); ts.add(2); ts.add(8); ts.add(1);
+System.out.println(ts); // [1, 2, 5, 8]
+</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

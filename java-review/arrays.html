@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Java Arrays</title>
+<style>
+body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}
+h1,h2{color:#2c3e50;}
+pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;}
+.btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}
+</style>
+</head>
+<body>
+<h1>Arrays</h1>
+<div class="card">
+<p>An array is a container that holds a fixed number of values of a single type. In Java, arrays are objects and are dynamically created.</p>
+<pre>int[] nums = {1, 2, 3, 4, 5};</pre>
+<h2>Common operations</h2>
+<ul>
+<li>Declaration: <code>int[] arr;</code></li>
+<li>Instantiation: <code>arr = new int[10];</code></li>
+<li>Access: <code>arr[2]</code> returns the third element</li>
+<li>Length: <code>arr.length</code></li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Write a loop that prints all elements of an int array')">Think</button>
+<pre>for (int i = 0; i < arr.length; i++) { System.out.println(arr[i]); }</pre>
+<h2>Code Question (no code)</h2>
+<p>What is the time complexity of accessing an element by index in an array? Answer: O(1).</p>
+<h2>Theory Question</h2>
+<p>Explain the difference between a single‑dimensional and a multi‑dimensional array in Java.</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Write a method <code>static int sumArray(int[] arr)</code> that returns the sum of all elements.</li>
+<li>Write a snippet that finds the second largest element in an int array without sorting.</li>
+<li>Given an array, move all zeros to the end while preserving the order of non‑zero elements.</li>
+</ol>
+<pre>// Example solution for problem 1:
+public static int sumArray(int[] arr) {
+    int sum = 0;
+    for (int v : arr) sum += v;
+    return sum;
+}</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

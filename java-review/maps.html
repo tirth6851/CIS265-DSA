@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Maps</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Maps</h1>
+<div class="card">
+<p>A Map stores key‑value pairs; each key is unique. Common implementations: HashMap (O(1) operations), LinkedHashMap (preserves insertion order), TreeMap (sorted keys).</p>
+<pre>Map<String, Integer> map = new HashMap<>();</pre>
+<h2>Key operations</h2>
+<ul>
+<li>Put: <code>map.put("one", 1)</code></li>
+<li>Get: <code>map.get("one")</code></li>
+<li>Contains key: <code>map.containsKey("one")</code></li>
+<li>Remove, size, clear</li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Add a mapping and retrieve it')">Think</button>
+<pre>Map<String, Integer> m = new HashMap<>(); m.put("height", 180); int h = m.get("height");</pre>
+<h2>Code Question (no code)</h2>
+<p>What does the <code>computeIfAbsent</code> method do in Map? Answer: If the key is not present, compute a value using the given function and put it into the map.</p>
+<h2>Theory Question</h2>
+<p>Compare HashMap and TreeMap regarding ordering and performance.</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Create a <code>HashMap<String, Integer></code>, add three country‑capital pairs, retrieve the capital for a given country, and print the size.</li>
+<li>Demonstrate <code>computeIfAbsent</code>: if the key "population" is absent, compute a value using a lambda and put it into the map, then retrieve it.</li>
+<li>Using a <code>TreeMap<String, Double></code>, insert a few values and iterate over the entries in sorted key order.</li>
+</ol>
+<pre>// Example solution for problem 1:
+Map<String, Integer> map = new HashMap<>();
+map.put("USA", 1); map.put("UK", 2); map.put("India", 72);
+System.out.println(map.get("USA")); // 1
+System.out.println(map.size());    // 3
+
+// Example solution for problem 2:
+Map<String, Integer> m = new HashMap<>();
+m.computeIfAbsent("population", k -> 1000);
+System.out.println(m.get("population")); // 1000
+
+// Example solution for problem 3:
+TreeMap<String, Double> tm = new TreeMap<>();
+tm.put("a", 1.1); tm.put("b", 2.2);
+for (Map.Entry<String, Double> e : tm.entrySet()) System.out.println(e.getKey() + " -> " + e.getValue());
+</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

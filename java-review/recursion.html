@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Recursion</title>
+<style>body{font-family:Arial,sans-serif;margin:20px;background:#f5f7fa;color:#333;}h1,h2{color:#2c3e50;}pre{background:#ecf0f1;padding:10px;border-radius:4px;overflow-x:auto;} .btn{background:#3498db;color:#fff;padding:6px 12px;border:none;border-radius:4px;cursor:pointer;}</style>
+</head>
+<body>
+<h1>Recursion</h1>
+<div class="card">
+<p>Recursion is a method calling itself to solve a smaller instance of the same problem. Must have a base case to terminate.</p>
+<pre>int factorial(int n) { return (n <= 1) ? 1 : n * factorial(n - 1); }</pre>
+<h2>Key aspects</h2>
+<ul>
+<li>Base case – condition that stops recursion.</li>
+<li>Progress case – problem size reduces toward base case.</li>
+<li>Stack depth – each call adds a frame; too deep may cause StackOverflowError.</li>
+</ul>
+<h2>Code Question (little code)</h2>
+<button class="btn" onclick="prompt('Write a recursive method to compute Fibonacci(n)')">Think</button>
+<pre>int fib(int n) { return (n <= 1) ? n : fib(n-1) + fib(n-2); }</pre>
+<h2>Code Question (no code)</h2>
+<p>What is the time complexity of the naive recursive Fibonacci? Answer: O(2^n).</p>
+<h2>Theory Question</h2>
+<p>Explain how recursion can be transformed into iteration using an explicit stack.</p>
+
+<h3>Practical Problems</h3>
+<ol>
+<li>Write a recursive method <code>int sumDigits(int n)</code> that returns the sum of the digits of a non‑negative integer.</li>
+<li>Write a recursive method <code>String reverse(String s)</code> that returns the reverse of a string.</li>
+<li>Convert the recursive <code>factorial</code> method to an iterative version using a loop.</li>
+</ol>
+<pre>// Example solution for problem 1:
+public static int sumDigits(int n) {
+    return (n < 10) ? n : n % 10 + sumDigits(n / 10);
+}
+
+// Example solution for problem 2:
+public static String reverse(String s) {
+    return (s.isEmpty()) ? s : reverse(s.substring(1)) + s.charAt(0);
+}
+</pre>
+</div>
+<nav><a href="index.html">Back to main</a></nav>
+</body>
+</html>

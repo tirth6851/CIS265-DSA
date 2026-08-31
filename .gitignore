@@ -1,0 +1,56 @@
+# Compiled Java Class Files & Build Output
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+bin/
+build/
+target/
+out/
+
+# Java / Build Tooling Cache
+.gradle/
+.m2/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+
+# OS Generated Files
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Trashes
+
+# Linux & Temp Files
+*~
+*.swp
+*.swo
+*.tmp
+*.log
